@@ -1,0 +1,20 @@
+.tab-selector .tab-links {
+	flex-grow: 0;
+}
+
+.app-content .img-grid-container {padding: 4vw}
+.app-content .img-grid {
+	grid-template-columns: repeat(auto-fill	, minmax(270px, 1fr));
+	grid-gap: 4vw;
+}
+.app-content .img-grid img {
+	max-height: 360px;
+}
+
+.principles div {
+	width: 30% !important;
+}
+
+.app-content .inputs input {
+	width: 49.5%;
+}
