@@ -104,13 +104,43 @@ document.addEventListener('DOMContentLoaded',() => {
 
 	imageGrid = document.querySelector('.img-grid');
 	shuffledURLs.forEach((url) => {
+		div = document.createElement('DIV')
 		image = document.createElement('img');
 		image.src = url;
-		imageGrid.appendChild(image)
+		div.appendChild(image)
+		imageGrid.appendChild(div)
 	})
 
 
-	console.log(Math.random)
+	imageGrid.childNodes.forEach((div) => {
+
+		div.onclick = () => {
+			if (div.classList.contains('selected')) {
+				// div.classList.remove('selected')
+			} 
+			else {
+				// div.classList.add('selected')
+				frames = 12
+
+				stepWidth = (document.body.offsetWidth - div.offsetWidth) / frames;
+				stepHeight = (window.clientHeight - div.clientHeight) / frames;
+				animate = setInterval(() => {
+					divWidth = div.offsetWidth
+					newDivWidth = divWidth + stepWidth
+					div.style.width = newDivWidth
+
+					divHeight = div.clientHeight
+					newDivHeight = divHeight + stepHeight
+					div.style.height = newDivHeight
+
+					if (frames-- == 0) {
+						console.log('all frames complete!')
+						window.clearInterval(animate)
+					}
+				}, (1000/60))
+			}
+		}
+	})
 
 
 
