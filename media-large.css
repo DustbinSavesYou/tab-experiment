@@ -11,6 +11,11 @@
 	max-height: 360px;
 }
 
+.app-content .img-grid div.selected img {
+	max-height: 70vh;
+	max-width: 40vw;
+}
+
 .principles div {
 	width: 30% !important;
 }

@@ -7,9 +7,9 @@ width: 680: image grid columns 3
 */
 
 :root {
-	--primary: #5d1049;
-	--primary-dark-shade: #4e0d3a;
-	--primary-light-shade: #720d5d;
+	--primary: #91003f;
+	--primary-dark-shade: #6e0030;
+	--primary-light-shade: #bf0053;
 	--primary-text: #ffffff;
 	--white: #ffffff;
 
@@ -175,14 +175,14 @@ body {
 .img-grid img {
 	max-height: 500px;
 }
-.img-grid div.selected {
+/* .img-grid div.selected {
 	position: fixed;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background: black;
-	z-index: 10;
+	background: rgb(30,30,30);
+	z-index: 100000;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -190,7 +190,7 @@ body {
 }
 .img-grid div.selected img {
 	max-height: auto;
-}
+} */
 
 .principles {
 	text-align: center;
@@ -206,7 +206,7 @@ body {
 	justify-content: center;*/
 }
 .principles img {
-	filter: hue-rotate(300deg)
+	filter: hue-rotate(-50deg) brightness(1)
 } 
 
 
