@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded',() => {
 
-	document.body.scrollTop = 0;
-
 	// TOP MENU HEIGHT
 
 	let menu = document.querySelector('.tab-selector')
@@ -112,18 +110,47 @@ document.addEventListener('DOMContentLoaded',() => {
 	})
 
 
-	// imageGrid.childNodes.forEach((div) => {
+	
 
-	// 	div.onclick = () => {
-	// 		if (div.classList.contains('selected')) {
-	// 			div.classList.remove('selected')
-	// 		} 
-	// 		else {
-	// 			div.classList.add('selected')
-	// 		}
-	// 	}
-	// })
+	// Detect when images finish loading, and remove loading screen
 
+
+	let images = document.images, len = images.length, counter = 0;
+	// images are all the images in the document, it's an htmlcollection
+	x = 0, imageArray = [];
+	for (x = 0; x < images.length; x++) {
+		imageArray.push(images[x])
+	}
+	console.log(imageArray)
+	// converted 'images' to an array called imageArray so array methods can be used on it
+
+	setTimeout(() => {
+		imageArray.forEach((img) => {
+			if (img.complete) {
+				incrementCounter()
+				console.log('image completed loading!')
+			} else {
+				img.addEventListener( 'load', incrementCounter, false );
+				console.log('image loaded through else statement')
+			}
+		})
+		function incrementCounter() {
+			counter++;
+			if (counter == len - 3){
+				// All except 3 images have loaded, not all images need to be laoded for loader to vanish
+				// REMOVE LOADER now
+
+				let loader = document.querySelector('.loader')
+				loader.style.opacity = 0; // transition duration is 250ms
+				setTimeout(() => {
+					loader.classList.add('loaded')
+				}, 250);
+
+				document.body.scrollTop = 0;
+			}
+		}
+
+	}, 500); // make this 0 for now
 
 
 
