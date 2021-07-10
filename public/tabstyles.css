@@ -174,14 +174,23 @@ body {
 	grid-gap: 3vw;
 }
 .img-grid img {
-	max-height: 500px;
+	max-height: 600px;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
 	.img-grid-container {
 		column-count: 2;
 	}
 }
-
+@media screen and (max-width: 820px) and (min-width: 480px) {
+	.img-grid-container {
+		column-count: 3;
+	}
+}
+@media screen and (min-width: 820px) {
+	.img-grid-container {
+		column-count: 4;
+	}
+}
 
 
 .principles {
