@@ -28,9 +28,7 @@ document.addEventListener('DOMContentLoaded',() => {
 		button.addEventListener('click', () => {
 
 			// vibrate if device supports it
-			// window.navigator.vibrate(100)
-
-			window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
+			window.navigator.vibrate(100)
 
 			//remove active class from all buttons and add it to corresponding button
 			tabButtons.forEach((button) => {button.classList.remove('active')})
