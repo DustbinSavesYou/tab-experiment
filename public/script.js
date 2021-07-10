@@ -111,6 +111,7 @@ document.addEventListener('DOMContentLoaded',() => {
 		imageGrid.appendChild(div)
 	})
 
+
 	// imageGrid.childNodes.forEach((div) => {
 
 	// 	div.onclick = () => {
