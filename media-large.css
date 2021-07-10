@@ -4,8 +4,9 @@
 
 .app-content .img-grid-container {padding: 4vw}
 .app-content .img-grid {
-	grid-template-columns: repeat(auto-fill	, minmax(265px, 1fr));
 	grid-gap: 4vw;
+	grid-template-columns: repeat(auto-fill	, minmax(265px, 1fr));
+	grid-template-rows: masonry;
 }
 .app-content .img-grid img {
 	max-height: 360px;

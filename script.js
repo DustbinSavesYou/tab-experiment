@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded',() => {
 		button.addEventListener('click', () => {
 
 			// vibrate if device supports it
-			window.navigator.vibrate(200)
+			window.navigator.vibrate(100)
 
 			//remove active class from all buttons and add it to corresponding button
 			tabButtons.forEach((button) => {button.classList.remove('active')})
@@ -83,15 +83,15 @@ document.addEventListener('DOMContentLoaded',() => {
 
 	let imageURLs = []
 	imageURLs = [
-		'./images/img1.jpg', './images/img2.jpg', './images/img3.jpg', 
-		'./images/img4.jpg', './images/img5.jpg', './images/img6.jpg', 
-		'./images/img7.jpg', './images/img8.jpg', './images/img9.jpg', 
-		'./images/img10.jpg', './images/img12.jpg', './images/img13.jpg', 
-		'./images/img14.jpg', './images/img15.jpg', './images/img16.jpg', 
-		'./images/img17.jpg', './images/img18.jpg', './images/img19.jpg', 
-		'./images/img20.jpg', './images/img21.jpg', './images/img22.jpg', 
-		'./images/img23.jpg', './images/img24.jpg', './images/img25.jpg', 
-		'./images/img26.jpg', './images/img27.jpg', './images/img28.jpg', 
+		'img1.jpg', 'img2.jpg', 'img3.jpg', 
+		'img4.jpg', 'img5.jpg', 'img6.jpg', 
+		'img7.jpg', 'img8.jpg', 'img9.jpg', 
+		'img10.jpg', 'img12.jpg', 'img13.jpg', 
+		'img14.jpg', 'img15.jpg', 'img16.jpg', 
+		'img17.jpg', 'img18.jpg', 'img19.jpg', 
+		'img20.jpg', 'img21.jpg', 'img22.jpg', 
+		'img23.jpg', 'img24.jpg', 'img25.jpg', 
+		'img26.jpg', 'img27.jpg', 'img28.jpg', 
 		]
 	// now randomize this array and parse it through the function below
 
@@ -106,11 +106,10 @@ document.addEventListener('DOMContentLoaded',() => {
 	shuffledURLs.forEach((url) => {
 		div = document.createElement('DIV')
 		image = document.createElement('img');
-		image.src = url;
+		image.src = `https://raw.githubusercontent.com/DustbinSavesYou/tab-experiment/main/images/${url}`;
 		div.appendChild(image)
 		imageGrid.appendChild(div)
 	})
-
 
 	// imageGrid.childNodes.forEach((div) => {
 

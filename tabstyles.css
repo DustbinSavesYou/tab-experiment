@@ -19,6 +19,7 @@ width: 680: image grid columns 3
 	--text-white: #ffffff;
 
 	overflow-x: hidden;
+	scrollbar-width: thin;
 }
 
 a.tab-button:focus {outline:0 !important;background: transparent !important;}
@@ -38,8 +39,8 @@ body {
 	min-width: 100%;
 	min-height: 100%;
 	scroll-behavior: smooth;
+	scrollbar-width: thin;
 }
-
 ::-webkit-scrollbar {width: 0}
 ::-webkit-scrollbar-track {color: rgb(200,200,200);}
 
@@ -166,31 +167,22 @@ body {
 	max-width: 100%;
 	min-width: 100%;
 	display: grid;
-	grid-template-columns: repeat(auto-fill	, minmax(165px, 1fr));
-	grid-template-rows: masonry;
-	align-items: center; /*block axis alignment*/
-	justify-items: center; /*inline axis alignment*/
+	/* grid-template-columns: repeat(auto-fill	, minmax(265px, 1fr));
+	grid-template-rows: masonry; */
+	align-items: center;
+	justify-items: center;
 	grid-gap: 3vw;
 }
 .img-grid img {
 	max-height: 500px;
 }
-/* .img-grid div.selected {
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background: rgb(30,30,30);
-	z-index: 100000;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition-duration: 300ms;
+@media screen and (max-width: 450px) {
+	.img-grid-container {
+		column-count: 2;
+	}
 }
-.img-grid div.selected img {
-	max-height: auto;
-} */
+
+
 
 .principles {
 	text-align: center;
