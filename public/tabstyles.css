@@ -244,7 +244,7 @@ input:hover {
 	color: var(--primary-text);
 }
 
-/*.loader {
+.loader {
 	position: fixed;
 	height: 100%;
 	width: 100%;
@@ -257,12 +257,27 @@ input:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-size: 2rem;
+	color: var(--primary-text);
+	font-family: sans-serif;
+}
+.loader span::after {
+	content: '.';
+	animation: loader 0.8s linear infinite alternate;
 }
 .loader img {
 	width: 30vw;
 }
-*/
+.loader.loaded {
+	display: none;
+}
 
+@keyframes loader {
+	0% {content: ''}
+	33% {content: '.'}
+	66% {content: '..'}
+	100% {content: '...'}
+}
 
 
 
